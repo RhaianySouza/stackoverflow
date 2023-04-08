@@ -150,12 +150,7 @@
 	
 	var title = 'slide_'+document.getElementsByClassName('swiper-slide-active')[0].getAttribute('aria-label').substring(0,document.getElementsByClassName('swiper-slide-active')[0].getAttribute('aria-label').indexOf('/')-1)+'.png';//Nome do arquivo criado
 	
-	//Resolvendo o problema de contaminação
-	var img = new Image();
-	img.src = image.src;	
-	img.crossOrigin = 'anonymous';
-	
-	canva.getContext("2d").drawImage(img, 0, 0, image.naturalWidth, image.naturalHeight, 0, 0, image.naturalWidth, image.naturalHeight);//desenha a image dentro do elemento canvas
+	canva.getContext("2d").drawImage(image, 0, 0, image.naturalWidth, image.naturalHeight, 0, 0, image.naturalWidth, image.naturalHeight);//desenha a image dentro do elemento canvas
 	
 	canva.toBlob(function(blob){
 	   saveAs(blob, title); //salva a imagem gerada no elemento canva criado
