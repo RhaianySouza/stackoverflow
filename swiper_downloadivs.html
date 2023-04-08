@@ -158,6 +158,17 @@
   };
   document.getElementById("download").addEventListener("click", saveIMG, false);
   </script>
+	
+	<p>Pode haver problemas de contaminação cruzada. O codigo dá erro quando tento rodar dentro da maquina.</p>
+	<p>As imagens precisam está dentro do servidor de origem, mas se você tentar aplicar o codigo abaixo, o codigo salva uma imagem vazia.</p>
+	<pre>
+	//Resolvendo o problema de contaminação
+	var img = new Image();
+	img.src = image.src;	
+	img.crossOrigin = 'anonymous';
+	</pre>
+	<p>Mas se rodo o codigo dentro da <a href='https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default_default'>w3schools</a>, <i>servidor de origem da imagem</i>, a imagem é baixada intacta</p>
+	<p>Boa sorte resolvendo essa questão.</p>
 </body>
 
 </html>
