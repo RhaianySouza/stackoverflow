@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        padding: 20px 20px 20px 20px;
+        height: 100%;
+        margin: 0px;
+      }
+      /* Helper divs */
+      div#hover-selector,
+      div#click-selector {
+        box-sizing: border-box;
+        display: none;
+        pointer-events: none;
+        border: 1px solid rgb(76, 120, 255);
+        position: absolute;
+        border-radius: 0px;
+        background-color: transparent;
+      }
+    </style>
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="frame_container" style="position: relative; width: 100%; height: 100%; overflow: hidden">
+      <iframe frameborder="0" title="Project" id="frame" style="width: 80%; height: 80%"></iframe>
+      <div id="click-selector"></div>
+      <div id="hover-selector"></div>
+    </div>
+  <script src='javascript.js'></script>
+  </body>
+</html>
